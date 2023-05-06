@@ -15,15 +15,25 @@ make deps
 ## Usage
 
 ```
-Usage: margatsni [-h] [--version] {public,pub,account,help} ...
+Usage: margatsni [-h] [--version] {account,public,pub,,help} ...
 
 Optional Arguments:
   --version                  show program's version number and exit
   -h, --help                 show this help message and exit
 
 Actions:
-  {public,pub,account,help}  Action to execute
+  {account,public,pub,help}  Action to execute
 ```
+### Account
+
+Commands about account-specific data (for example, recommendation data).
+
+To get posts from explore section:
+
+```bash
+margatsni account explore limit -c cookie
+```
+where `limit` is the number of posts to retrieve and `cookie` is the Instagram cookie which needs to be manually retrieved from web browser (getting it with `margatsni` is currently not working). To get it in a french web browser: clic droit > Inspecter > Réseau > premier lien où un cookie apparaît > entête de la requête > Cookie à copier.
 
 ### Public
 
@@ -53,14 +63,3 @@ To know more about a specific subcommand:
 ```bash
 margatsni pub subcommand_name -h
 ```
-
-### Account
-
-Commands about account-specific data (for example, recommendation data).
-
-To get posts from explore section:
-
-```bash
-margatsni account explore limit -c cookie
-```
-where `limit` is the number of posts to retrieve and `cookie` is the Instagram cookie which needs to be manually retrieved from web browser (getting it with `margatsni` is currently not working). To get it in a french web browser: clic droit > Inspecter > Réseau > premier lien où un cookie apparaît > entête de la requête > Cookie à copier.

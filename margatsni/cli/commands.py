@@ -1,8 +1,8 @@
-from margatsni.cli.public import (
-    PUBLIC_COMMAND
-)
 from margatsni.cli.account import (
     ACCOUNT_COMMAND
 )
+from margatsni.cli.public import (
+    PUBLIC_COMMAND
+)
 
-MARGATSNI_COMMANDS = [PUBLIC_COMMAND, ACCOUNT_COMMAND]
+MARGATSNI_COMMANDS = [ACCOUNT_COMMAND, PUBLIC_COMMAND]
