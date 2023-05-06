@@ -25,13 +25,20 @@ ACCOUNT_EXPLORE_SUBCOMMAND = subcommand(
         Beware, instagram only provides temporary links, not permalinks,
         for profile picture urls retrieved as the "profile_pic_url" in
         the result. Be sure to download them fast if you need them (you can
-        use the `minet fetch` command for that, and won't need to use cookies).
+        use the `minet fetch` (https://github.com/medialab/minet) command for that,
+        and won't need to use cookies).
     """,
     epilog="""
         example:
             $ margatsni account explore 5 > explore.csv
     """,
-    variadic_input={"dummy_column": "limit"},
+    arguments=[
+        {
+            "name": "limit",
+            "help": "Number of posts to retrive.",
+            "type": int
+        }
+    ],
 )
 
 ACCOUNT_COMMAND = command(

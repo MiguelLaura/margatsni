@@ -1,5 +1,5 @@
 # Variables
-SOURCE = shelob
+SOURCE = margatsni
 
 # Functions
 define clean
