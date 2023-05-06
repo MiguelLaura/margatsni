@@ -18,3 +18,4 @@ ftest/*.csv
 *.egg-info
 *.pyc
 *.spec
+*.csv
