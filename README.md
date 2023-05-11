@@ -31,9 +31,9 @@ Commands about account-specific data (for example, recommendation data).
 To get posts from explore section:
 
 ```bash
-margatsni account explore limit -c cookie
+margatsni account explore limit
 ```
-where `limit` is the number of posts to retrieve and `cookie` is the Instagram cookie which needs to be manually retrieved from web browser (getting it with `margatsni` is currently not working). To get it in a french web browser: clic droit > Inspecter > Réseau > premier lien où un cookie apparaît > entête de la requête > Cookie à copier.
+where `limit` is the number of posts to retrieve. It will automatically get the authenticated cookie from firefox. To change the browser, use the argument --cookie (or -c) followed by your browser name (it supports "firefox", "chrome", "chromium", "opera" and "edge"), or followed directly by the cookie to use. 
 
 ### Public
 
