@@ -9,7 +9,7 @@ from minet.instagram.api_scraper import (
     InstagramAPIScraper,
 )
 from minet.instagram.exceptions import (
-    InstagramPublicAPIInvalidResponseError,
+    InstagramInvalidTargetError
 )
 from minet.instagram.formatters import (
     format_post,
@@ -39,15 +39,23 @@ class AccountInstagramAPIScraper(InstagramAPIScraper):
             sections = getpath(data, ["sectional_items"])
 
             if not sections:
-                raise InstagramPublicAPIInvalidResponseError
+                raise InstagramInvalidTargetError
 
             for section in sections:
 
                 subsection_1 = getpath(section, ["layout_content", "one_by_two_item", "clips", "items"])
+
+                if not subsection_1:
+                    raise InstagramInvalidTargetError
+
                 for item in subsection_1:
                     yield format_post(item["media"])
 
                 subsection_2 = getpath(section, ["layout_content", "fill_items"])
+
+                if not subsection_2:
+                    raise InstagramInvalidTargetError
+
                 for item in subsection_2:
                     yield format_post(item["media"])
 
