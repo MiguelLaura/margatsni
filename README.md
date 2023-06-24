@@ -1,6 +1,6 @@
 # Margatsni
 
-Margatsni is Minet, but only for Instagram. It adds some commands to get account-specific data.
+Margatsni is Minet, but only for Instagram. It adds some commands to get account-specific data. Most of the code comes from, or is strongly inspired by https://github.com/medialab/minet.
 
 ## Installation
 
@@ -28,6 +28,8 @@ Actions:
 
 Commands about account-specific data (for example, recommendation data).
 
+!!! WARNING !!! Instagram is able to detect this tool as a bot and block you.
+
 To get posts from explore section:
 
 ```bash
@@ -37,7 +39,7 @@ where `limit` is the number of posts to retrieve. It will automatically get the 
 
 ### Public
 
-Corresponds to the commands comming from Minet (https://github.com/medialab/minet).
+Corresponds to the commands coming from Minet (https://github.com/medialab/minet).
 
 ```
 Usage: margatsni public [-h] [-c COOKIE] [--rcfile RCFILE] [--silent] {comments,hashtag,post-infos,user-followers,user-following,user-infos,user-posts} ...
