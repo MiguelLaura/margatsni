@@ -18,7 +18,7 @@ make deps
 ## Usage
 
 ```
-Usage: margatsni [-h] [--version] {account,public,pub,,help} ...
+Usage: python -m margatsni.cli [-h] [--version] {account,public,pub,,help} ...
 
 Optional Arguments:
   --version                  show program's version number and exit
@@ -36,7 +36,7 @@ Commands about account-specific data (for example, recommendation data).
 To get posts from explore section:
 
 ```bash
-margatsni account explore limit
+python -m margatsni.cli account explore limit
 ```
 where `limit` is the number of posts to retrieve. It will automatically get the authenticated cookie from firefox. To change the browser, use the argument --cookie (or -c) followed by your browser name (it supports "firefox", "chrome", "chromium", "opera" and "edge"), or followed directly by the cookie to use. 
 
@@ -45,7 +45,7 @@ where `limit` is the number of posts to retrieve. It will automatically get the 
 Corresponds to the commands coming from Minet (https://github.com/medialab/minet).
 
 ```
-Usage: margatsni public [-h] [-c COOKIE] [--rcfile RCFILE] [--silent] {comments,hashtag,post-infos,user-followers,user-following,user-infos,user-posts} ...
+Usage: python -m margatsni.cli public [-h] [-c COOKIE] [--rcfile RCFILE] [--silent] {comments,hashtag,post-infos,user-followers,user-following,user-infos,user-posts} ...
 
 # Margatsni Public Command
 
@@ -66,5 +66,5 @@ Subcommands:
 To know more about a specific subcommand:
 
 ```bash
-margatsni pub subcommand_name -h
+python -m margatsni.cli pub subcommand_name -h
 ```
