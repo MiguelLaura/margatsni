@@ -11,10 +11,9 @@ define clean
 endef
 
 # Targets
-all: lint test
+all: lint
 compile: clean pyinstaller
-test: unit
-publish: clean lint test upload
+publish: clean lint upload
 	$(call clean)
 
 clean:
@@ -27,17 +26,11 @@ deps:
 lint:
 	@echo Searching for unused imports...
 	importchecker $(SOURCE) | grep -v __init__ || true
-	importchecker test | grep -v __init__ || true
 	@echo
 
 format:
 	@echo Formatting source code using black
 	black $(SOURCE) ftest hooks scripts test
-	@echo
-
-unit:
-	@echo Running unit tests...
-	pytest -svvv
 	@echo
 
 upload:

@@ -2,6 +2,9 @@
 
 Margatsni is Minet, but only for Instagram. It adds some commands to get account-specific data. Most of the code comes from, or is strongly inspired by https://github.com/medialab/minet.
 
+*Le dossier `reseaux` contient des réseaux liés à un projet dans le cadre l'UV IC05 à l'UTC réalisé pendant le semestre P23. Le projet était de récupérer des posts liés aux hashtags concernant la réforme des retraites et d'analyser ces posts. Le dossier `reseaux` est donc une partie de cette analyse. Dans le dossier, vous trouverez un fichier `reseaux.md` expliquant leur construction et les interprétant.*
+
+
 ## Installation
 
 You need to set up a python environment. Then, in your shell, type:

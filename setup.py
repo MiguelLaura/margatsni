@@ -22,7 +22,7 @@ setup(
     author="Miguel Laura",
     keywords="webmining",
     python_requires=">=3.7",
-    packages=find_packages(exclude=["ftest", "scripts", "test"]),
+    packages=find_packages(),
     install_requires=["minet==1.0.0a13"],
     entry_points={"console_scripts": ["margatsni=margatsni.cli.__main__:main"]},
     zip_safe=True,
